@@ -1,0 +1,126 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[
+    paperwidth=210mm,
+    paperheight=297mm,
+    margin=20mm,
+    heightrounded,
+    includefoot,
+    footskip=20pt
+]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{enumitem} 
+\usepackage{amsmath} %retirer les (1) après les équations
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[french]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsthm}
+% \usepackage[
+%    backend=biber,        % compilateur par défaut pour biblatex
+%    sorting=nyt,          % trier par nom, année, titre
+%    citestyle=authoryear, % style de citation auteur-année
+%    bibstyle=alphabetic,  % style de bibliographie alphabétique
+% ]{biblatex}
+% \addbibresource{refs.bib}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{xcolor}
+\usepackage{listings}
+
+\lstset{%
+  language=Python,
+  basicstyle   = \ttfamily,
+  keywordstyle =    \color{magenta},
+  keywordstyle = [2]\color{orange},
+  commentstyle =    \color{gray}\itshape,
+  stringstyle  =    \color{cyan},
+  numbers      = left,
+  frame        = single,
+  framesep     = 2pt,
+  aboveskip    = 1ex
+}
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE CESI - Ecole d'ingénieur}\\[1.5cm] % Name of your university/college
+\textsc{\Large A4 Info}\\[0.5cm] % Major heading such as course name
+%\textsc{\large Assignment 1}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Livrable éthique}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteurs :}\\
+COTTINEAU \textsc{Romain} \\
+METSA MIKAM \textsc{Coralistone} \\
+BRIFFAUD \textsc{Simon} \\
+SALAÜN \textsc{Adrian} \\
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Lecteur :} \\
+NAIT CHABANE \textsc{Ahmed} \\
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large Vendredi 17 mars 2023}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics[width=200px, keepaspectratio]{img/Logo_cesi_2022.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\input{pages/Texte.tex}
+\end{document}
